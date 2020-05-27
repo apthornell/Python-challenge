@@ -9,7 +9,6 @@ cand_unique={}
 with open(electioncsv, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header=next(csvreader)
-   # print(csv_header)
     
     for row in csvreader:
       vote_count += 1

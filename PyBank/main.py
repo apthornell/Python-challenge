@@ -1,10 +1,7 @@
 import os
 import csv
 
-#print("Hello Andrew")
-#print(os.getcwd())
-#os.chdir('Desktop/Python-challenge/Pybank')
-#print(os.getcwd())
+
 
 budget_csv = os.path.join('..','Resources','budget_data.csv')
 exportpath= os.path.join('..','Resources','financial_analysis.txt')
@@ -16,7 +13,7 @@ net_change=[]
 with open(budget_csv, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
-   # print(f'Header: {csv_header}')
+   
     
     for row in csvreader:
         months.append(row[0])
@@ -28,10 +25,8 @@ with open(budget_csv, newline='') as csvfile:
 month_total=len(months)
 net_profit=sum(profits)
 
-#print('Total months= '+ str(month_total)+ ' and total profit= $' + str(net_profit))
 
 average_change=round(sum(net_change)/month_total,2)
-#print('Average change= $'+str(average_change))
 
 greatest_increase=profits[0]
 greatest_decrease=profits[0]
