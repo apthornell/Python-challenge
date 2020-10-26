@@ -1,2 +1,2 @@
 # Python-challenge
-Python HW for data visualization bootcamp
+Making python scripts to do financial anaylys of banking records, and polling votes for a mock election.
